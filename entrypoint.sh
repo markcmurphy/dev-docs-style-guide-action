@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-quality-docs . 2>&1 >/dev/null \
+quality-docs "{,**/}*.md" 2>&1 >/dev/null \
   | reviewdog \
       -efm="%f:%l:%c %m" \
       -efm="%f:%l %m" \
