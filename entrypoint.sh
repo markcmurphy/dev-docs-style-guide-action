@@ -1,9 +1,6 @@
 #!/bin/sh
-set -e
 
-if [ -n "${GITHUB_WORKSPACE}" ] ; then
-  cd "${GITHUB_WORKSPACE}/${INPUT_WORKDIR}" || exit
-fi
+cd "${GITHUB_WORKSPACE}" || exit
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
