@@ -9,7 +9,7 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
 echo "Some console message 04" 
 
-quality-docs . \
+quality-docs ${GITHUB_WORKSPACE} \
   | reviewdog \
       -efm='%-P%f' \
       -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %trror  %m |' \
