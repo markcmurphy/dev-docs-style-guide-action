@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-quality-docs ./example.md \
+quality-docs "${GITHUB_WORKSPACE}/example.md" \
   | reviewdog -efm="%f:%l:%c: %m" \
       -name="linter-name (misspell)" \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
