@@ -6,7 +6,7 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
 echo "Some console message 03"
 
-quality-docs "./{,**/}*.md" \
+quality-docs "{,**/}*.md" \
   | reviewdog \
       -efm="%f:%l:%c %m" \
       -efm="%f:%l %m" \
