@@ -11,11 +11,10 @@ echo "Some console message 04"
 
 quality-docs *.md \
   | reviewdog \
-      -efm='%-P%f' \
-      -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %trror  %m ' \
-      -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %tarning  %m ' \
-      -efm='%-Q ' \
-      -efm='%-G%.%# ' \
+      -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %trror  %m' \
+      -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %tarning  %m' \
+      -efm='%-Q' \
+      -efm='%-G%.%#' \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
