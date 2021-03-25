@@ -4,7 +4,9 @@ cd "${GITHUB_WORKSPACE}" || exit
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-quality-docs "{,**/}*.md" 2>&1 \
+echo "Some console message"
+
+quality-docs "test.md" 2>&1 \
   | reviewdog \
       -efm="%f:%l:%c %m" \
       -efm="%f:%l %m" \
