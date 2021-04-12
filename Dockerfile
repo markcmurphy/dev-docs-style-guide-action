@@ -8,6 +8,7 @@ SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN apk --no-cache add git
 
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
+# TODO: try pretty-reporter - RUN npm install -g markcmurphy/quality-docs-fork#pretty-reporter --save
 RUN npm install -g markcmurphy/quality-docs-fork#pretty-reporter --save
 
 COPY entrypoint.sh /entrypoint.sh
