@@ -7,6 +7,8 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
+shopt -s globstar
+
 quality-docs {**,.}/*.md \
   | reviewdog \
       -efm='%-P%f' \
