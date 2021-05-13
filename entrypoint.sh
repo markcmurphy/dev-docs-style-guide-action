@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 if [ -n "${GITHUB_WORKSPACE}" ] ; then
@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-quality-docs . \
+find . -type f -exec echo "quality-docs *.md" \
   | reviewdog \
       -efm='%-P%f' \
       -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %trror  %m' \
