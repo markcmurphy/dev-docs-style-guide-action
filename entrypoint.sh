@@ -7,8 +7,8 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-find . -name *.md -print0 \
-| xargs -0 quality-docs \
+find ./docs -name *.md -print0 \
+| xargs echo \
   | reviewdog \
       -efm='%-P%f' \
       -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %trror  %m' \
