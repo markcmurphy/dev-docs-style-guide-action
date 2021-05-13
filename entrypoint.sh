@@ -7,8 +7,6 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-echo "Some console message 05" 
-
 quality-docs *.md \
   | reviewdog \
       -efm='%-P%f' \
