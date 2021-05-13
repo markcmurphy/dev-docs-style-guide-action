@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-find ./ -type f -name '*.md'
+find ${GITHUB_WORKSPACE} -type f -name '*.md'
   | reviewdog \
       -efm='%-P%f' \
       -efm=' %#%l:%c-%[0-9]%#:%[0-9]%# %# %trror  %m' \
